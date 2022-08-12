@@ -77,28 +77,28 @@ const CoverVideo = () => {
       <DarkOverLay />
       <Title variants={container} initial="hidden" animate="show">
         <div>
-          <motion.h1 variants={item} data-scroll data-scroll-delay="0.4" data-scroll-speed="10">
+          <motion.h1 variants={item} data-scroll data-scroll-delay="0.4" data-scroll-speed="5">
             D
           </motion.h1>
-          <motion.h1 variants={item} data-scroll data-scroll-delay="0.2" data-scroll-speed="10">
+          <motion.h1 variants={item} data-scroll data-scroll-delay="0.2" data-scroll-speed="5">
             o
           </motion.h1>
-          <motion.h1 variants={item} data-scroll data-scroll-delay="0.1" data-scroll-speed="10">
+          <motion.h1 variants={item} data-scroll data-scroll-delay="0.1" data-scroll-speed="5">
             H
           </motion.h1>
-          <motion.h1 variants={item} data-scroll data-scroll-delay="0.08" data-scroll-speed="10">
+          <motion.h1 variants={item} data-scroll data-scroll-delay="0.08" data-scroll-speed="5">
             u
           </motion.h1>
-          <motion.h1 variants={item} data-scroll data-scroll-delay="0.06" data-scroll-speed="10">
+          <motion.h1 variants={item} data-scroll data-scroll-delay="0.06" data-scroll-speed="5">
             n
           </motion.h1>
-          <motion.h1 variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="10">
+          <motion.h1 variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="5">
             g
           </motion.h1>
         </div>
-        <h2 data-scroll data-scroll-delay="0.04" data-scroll-speed="4">
+        <motion.h2 variants={item}  data-scroll data-scroll-delay="0.04" data-scroll-speed="4">
           Do. Viet. Hung
-        </h2>
+        </motion.h2>
       </Title>
       <video src={MainVideo} autoPlay muted loop type="video/mp4"></video>
     </VideoContainer>
