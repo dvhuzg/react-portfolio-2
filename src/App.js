@@ -5,8 +5,11 @@ import {dark} from './styles/Themes'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import 'locomotive-scroll/dist/locomotive-scroll.css'
 import { useRef } from 'react'
+import { AnimatePresence } from 'framer-motion'
+import ScrollTriggerProxy from './components/ScrollTriggerProxy'
 import Home from './sections/Home'
 import About from './sections/About'
+import Shop from './sections/Shop'
 
 
 const App = () => {
@@ -31,10 +34,14 @@ const App = () => {
   }
   containerRef={containerRef}
 >
-  <main data-scroll-container ref={containerRef}>
-    <Home/>
-    <About/>
-  </main>
+  <ScrollTriggerProxy />
+  <AnimatePresence>
+    <main className='App' data-scroll-container ref={containerRef}>
+      <Home/>
+      <About/>
+      <Shop/>
+    </main>
+  </AnimatePresence>
 </LocomotiveScrollProvider>
     </ThemeProvider>
     </>
