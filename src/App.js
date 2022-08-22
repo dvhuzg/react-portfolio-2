@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from './styles/GlobalStyles'
 import {dark} from './styles/Themes'
@@ -11,10 +11,18 @@ import Home from './sections/Home'
 import About from './sections/About'
 import Shop from './sections/Shop'
 import Banner from './sections/Banner'
-
-
+import NewArrival from './sections/NewArrival'
+import Footer from './sections/Footer'
+import Loader from './components/Loader'
+import { useEffect } from 'react'
 const App = () => {
   const containerRef = useRef(null);
+  const [loaded, setLoaded] = useState(false);
+useEffect(()=>{
+  setTimeout(()=>{
+    setLoaded(true)
+  },3000);
+},[]);
   return (
     <>
     <GlobalStyles/>
@@ -24,6 +32,12 @@ const App = () => {
     {
       smooth: true,
       // ... all available Locomotive Scroll instance options 
+      smartphone: {
+        smooth:true
+      },
+      tablet:{
+        smooth:true
+      }
     }
   }
   watch={
@@ -35,6 +49,7 @@ const App = () => {
   }
   containerRef={containerRef}
 >
+ <AnimatePresence>{loaded ? null:<Loader/>}</AnimatePresence>
   <ScrollTriggerProxy />
   <AnimatePresence>
     <main className='App' data-scroll-container ref={containerRef}>
@@ -42,6 +57,8 @@ const App = () => {
       <About/>
       <Shop/>
       <Banner/>
+      <NewArrival/>
+      <Footer/>
     </main>
   </AnimatePresence>
 </LocomotiveScrollProvider>

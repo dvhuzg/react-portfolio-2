@@ -10,6 +10,12 @@ const VideoContainer = styled.section`
     width: 100%;
     height: 100vh;
     object-fit: cover;
+    @media (max-width: 48em) {
+      object-position: center 10%;
+    }
+  }
+  @media (max-width: 30em) {
+    object-position: center 50%;
   }
 `;
 const DarkOverLay = styled.div`
@@ -44,6 +50,9 @@ const Title = styled(motion.div)`
     font-family: "kaushan script";
     font-size: ${(props) => props.theme.fontBig};
     text-shadow: 1px 1px 1px ${(props) => props.theme.body};
+    @media (max-width: 30em) {
+      font-size: calc(5rem + 4vw);
+    }
   }
   h2 {
     font-family: "Sirin Stencil";
@@ -51,6 +60,10 @@ const Title = styled(motion.div)`
     text-shadow: 1px 1px 1px ${(props) => props.theme.body};
     font-weight: 300;
     text-transform: capitalize;
+    @media (max-width: 30em) {
+      font-size:  ${(props) => props.theme.fontmd};
+      margin-top: -1.5rem;
+    }
   }
 `;
 const container = {
@@ -60,7 +73,7 @@ const container = {
   show: {
     opacity: 1,
 
-    transition: { delayChildren:2,staggerChildren:0.3,ease: "easeInOut" },
+    transition: { delayChildren: 5, staggerChildren: 0.3, ease: "easeInOut" },
   },
 };
 const item = {
@@ -77,26 +90,54 @@ const CoverVideo = () => {
       <DarkOverLay />
       <Title variants={container} initial="hidden" animate="show">
         <div>
-          <motion.h1 variants={item} data-scroll data-scroll-delay="0.4" data-scroll-speed="5">
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.4"
+            data-scroll-speed="5">
             D
           </motion.h1>
-          <motion.h1 variants={item} data-scroll data-scroll-delay="0.2" data-scroll-speed="5">
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.2"
+            data-scroll-speed="5">
             o
           </motion.h1>
-          <motion.h1 variants={item} data-scroll data-scroll-delay="0.1" data-scroll-speed="5">
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.1"
+            data-scroll-speed="5">
             H
           </motion.h1>
-          <motion.h1 variants={item} data-scroll data-scroll-delay="0.08" data-scroll-speed="5">
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.08"
+            data-scroll-speed="5">
             u
           </motion.h1>
-          <motion.h1 variants={item} data-scroll data-scroll-delay="0.06" data-scroll-speed="5">
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.06"
+            data-scroll-speed="5">
             n
           </motion.h1>
-          <motion.h1 variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="5">
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.04"
+            data-scroll-speed="5">
             g
           </motion.h1>
         </div>
-        <motion.h2 variants={item}  data-scroll data-scroll-delay="0.04" data-scroll-speed="4">
+        <motion.h2
+          variants={item}
+          data-scroll
+          data-scroll-delay="0.04"
+          data-scroll-speed="4">
           Do. Viet. Hung
         </motion.h2>
       </Title>
