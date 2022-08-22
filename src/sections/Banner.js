@@ -28,10 +28,10 @@ const Container = styled.div`
 `
 const BannerComponent = styled.h1`
 font-size: ${props => props.theme.fontxxxl};
-font-family: 'kaushan script';
+font-family: 'pacifico';
 color: ${props=>props.theme.text};
 white-space: nowrap;
-text-transform: uppercase;
+/* text-transform: uppercase; */
 line-height: 1;
 
 @media (max-width: 70em) {
@@ -58,19 +58,19 @@ const Banner = () => {
     <Section>
         <Container id='up'>
             <BannerComponent>
-                <span data-scroll data-scroll-direction='horizontal' data-scroll-speed='8' data-scroll-target='#up'>Fashion is the armour</span>
+                <span data-scroll data-scroll-direction='horizontal' data-scroll-speed='8' data-scroll-target='#up'>"Tôi tên Đỗ Hùng."</span>
             </BannerComponent>
             <BannerComponent>
-                <span data-scroll data-scroll-direction='horizontal' data-scroll-speed='6' data-scroll-target='#up'>to survive everyday life</span>
+                <span data-scroll data-scroll-direction='horizontal' data-scroll-speed='6' data-scroll-target='#up'>Đỗ Hùng tốt tính xin phép</span>
             </BannerComponent>
             <BannerComponent>
-                <span data-scroll data-scroll-direction='horizontal' data-scroll-speed='-6' data-scroll-target='#up'>One is never over-dressed or</span>
+                <span data-scroll data-scroll-direction='horizontal' data-scroll-speed='-6' data-scroll-target='#up'>giới thiệu bản thân,</span>
             </BannerComponent>
             <BannerComponent>
-                <span data-scroll data-scroll-direction='horizontal' data-scroll-speed='6' data-scroll-target='#up'>under-dressed</span>
+                <span data-scroll data-scroll-direction='horizontal' data-scroll-speed='6' data-scroll-target='#up'>"Đỗ trong Đỗ Hùng,</span>
             </BannerComponent>
             <BannerComponent>
-                <span data-scroll data-scroll-direction='horizontal' data-scroll-speed='-4' data-scroll-target='#up'>with a Little Black Dress</span>
+                <span data-scroll data-scroll-direction='horizontal' data-scroll-speed='-4' data-scroll-target='#up'>Hùng trong Đỗ Hùng"</span>
             </BannerComponent>
         </Container>
     </Section>

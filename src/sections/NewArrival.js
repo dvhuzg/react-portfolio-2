@@ -62,9 +62,13 @@ const Title = styled.h1`
   z-index: 11;
   @media (max-width: 64em) {
     font-size: ${(props) => props.theme.fontxxl};
+  left: 10%;
+
   }
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontxl};
+  left: 10%;
+
   }
 `;
 
@@ -85,7 +89,7 @@ const Text = styled.div`
 
 const Container = styled.div`
   position: absolute;
-  top: 12%;
+  top: 0%;
   left: 50%;
   transform: translate(-50%, 0);
   width: 25vw;
@@ -101,11 +105,14 @@ const Container = styled.div`
   }
   @media (max-width: 64em) {
     width: 30vw;
+    top: 10%;
   }
   @media (max-width: 48em) {
+    top: 10%;
     width: 40vw;
   }
   @media (max-width: 30em) {
+    top: 10%;
     width: 60vw;
   }
 `;
